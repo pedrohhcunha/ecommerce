@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/27b9c83134.js"></script>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema</title>
+</head>
+<body>
+    <header>
+        <div class="area-title">
+            <h1>Ecommerce</h1>
+            <h4>Crie - Visualise - Edite - Apague </h4>
+        </div>
+        <div class="area-buttons">
+            <button id="openCriarProduto">+ Criar Produto</button>
+        </div>
+    </header>
+    <section class="area-produtos" id="produtos">
+        <div class="opt-produtos">
+            <div class="area-select">
+                <span>Filtrar por:</span>
+                <select id="selectFiltro" name="filtrar">
+                    <option value="Todos" selected>Todos</option>
+                    <option value="Camisas" >Camisas</option>
+                    <option value="Blusas">Blusas</option>
+                    <option value="Acessorios">Acessórios</option>
+                </select>
+            </div>
+            <div class="area-select">
+                <span>Ordenar por:</span>
+                <select id="selectOrdem" name="filtrar">
+                    <option value="price/c">Menor Preço</option>
+                    <option value="price/d">Maior Preço</option>
+                    <option value="date/c" selected>Mais Novo</option>
+                    <option value="date/d">Mais Antigo</option>
+                </select>
+            </div>
+            <div class="area-busca">
+                <input type="text" placeholder="Pesquisar...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="produtos"></div>
+    </section>
+    <div class="area-modal">
+        <div class="modal">
+            <div class="top-area">
+                <h2>Criar Produto</h2>
+                <i id="closeCriarProduto" class="fas fa-window-close"></i>
+            </div>
+            <form action="" method="post">
+                <div class="first">
+                    <div class="area-input">
+                        <h4>Nome</h4>
+                        <input type="text">
+                    </div>
+                    <div class="area-input">
+                        <h4>Preço</h4>
+                        <input id="priceInput" maxlength="6"onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text">
+                    </div>
+                    <div class="area-input">
+                        <h4>Tamanho</h4>
+                        <div id="size" class="area">
+                            <div class="add-area">
+                                <input id="inputSize" type="text">
+                                <div id="btnSize" class="add-btn">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-input">
+                        <h4>Cor</h4>
+                        <div id="color" class="area">
+                            <div class="add-area">
+                                <input id="inputColor" type="text">
+                                <div id="btnColor" class="add-btn">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area-input">
+                        <h4>Categoria</h4>
+                        <div id="category" class="area">
+                            <div class="add-area">
+                                <input id="inputCategory" type="text">
+                                <div id="btnCategory" class="add-btn">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Cadastrar</button>
+                </div>
+                <div class="second">
+                    <div class="area-img">
+                        <img id="imgPrincipal" src="placeholder.png" alt="">
+                        <label for="fileUpload">Incluir Imagens</label>
+                        <input accept="image/*" type="file" multiple id="fileUpload">
+                    </div>
+                    <div class="secundarias">
+                        <img class="imgS" src="placeholder.png" alt="">
+                        <img class="imgS" src="placeholder.png" alt="">
+                        <img class="imgS" src="placeholder.png" alt="">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/27b9c83134.js"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#Contato">Contato</a></li>
+            <li><a href="#produtos">Sobre</a></li>
+        </ul>
+        <div class="title">
+            <h1>Ecommerce</h1>
+            <i class="fas fa-bars" id="btnHeader"></i>
+        </div>
+        <div class="area-busca">
+            <input type="text" placeholder="Pesquisar...">
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+    <section class="area-carrossel" id="#inicio">
+        <div class="carrossel">
+            <img class="imgCarrossel" src="img/1.png" alt="">
+            <img class="imgCarrossel" src="img/2.png" alt="">
+            <img class="imgCarrossel" src="img/3.png" alt="">
+            <img class="imgCarrossel" src="img/4.png" alt="">
+            <div class="controls">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div id="prevCarrossel" class="prev-next"><i class="fas fa-angle-left"></i></div>
+            <div id="nextCarrossel" class="prev-next"><i class="fas fa-angle-right"></i></div>
+        </div>
+    </section>
+    <section class="area-vantagens">
+        <div class="vantagem">
+            <h2>Entregue em mãos</h2>
+        </div>
+        <div class="vantagem">
+            <h2>Pague como quiser</h2>
+        </div>
+    </section>
+    <section class="area-produtos" id="produtos">
+        <h1>Produtos</h1>
+        <div class="opt-produtos">
+            <div class="area-select">
+                <span>Filtrar por:</span>
+                <select id="selectFiltro" name="filtrar">
+                    <option value="Todos" selected>Todos</option>
+                    <option value="Camisas" >Camisas</option>
+                    <option value="Blusas">Blusas</option>
+                    <option value="Acessorios">Acessórios</option>
+                </select>
+            </div>
+            <div class="area-select">
+                <span>Ordenar por:</span>
+                <select id="selectOrdem" name="filtrar">
+                    <option value="price/c">Menor Preço</option>
+                    <option value="price/d">Maior Preço</option>
+                    <option value="date/c" selected>Mais Novo</option>
+                    <option value="date/d">Mais Antigo</option>
+                </select>
+            </div>
+        </div>
+        <div class="produtos"></div>
+    </section>
+    <footer id="Contato">
+        <div class="first">
+            <div class="content">
+                <h2>Midias Sociais</h2>
+                <div class="rede">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="https://facebook.com">Facebook</a>
+                </div>
+                <div class="rede">
+                    <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com">Twitter</a>
+                </div>
+                <div class="rede">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://Instagram.com">Instagram</a>
+                </div>
+                <div class="rede">
+                    <i class="far fa-envelope"></i>
+                    <a href="malito:phhcpedrohhcunha@gmail.com">Email</a>
+                </div>
+            </div>
+            <div class="novidades">
+                <h2>Receba novidades</h2>
+                <div class="area-email">
+                    <input type="email" placeholder="Digite seu email...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <img src="img/logo.png" alt="Ecommerce">
+        </div>
+    </footer>
+    <footer id="direitos">
+        Todos os direitos resevados a ECOMMERCE
+    </footer>
+    <div class="area-modal">
+        <div class="modal">
+            <div class="area-fotos">
+                <div class="secundarias">
+                    <img class="imgModal" src="" alt="">
+                    <img class="imgModal" src="" alt="">
+                    <img class="imgModal" src="" alt="">
+                    <img class="imgModal" src="" alt="">
+                </div>
+                <div class="principal">
+                    <img class="imgPrincipalModal" src="" alt="">
+                </div>
+            </div>
+            <div class="area-infos">
+                <div class="content">
+                    <h1 id="nomeModal">nome do produto</h1>
+                    <h2 id="priceModal"></h2>
+                    <p id="descModal"></p>
+                    <div class="size-info">
+                        <h3>Tamanho</h3>
+                        <div id="sizesModal" class="sizes"></div>
+                    </div>
+                    <div class="color-info">
+                        <h3>Cores</h3>
+                        <div id="colorsModal" class="colors">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="escModal">Cancelar <i class="far fa-window-close"></i></button>
+                    <button id="btnComprar">Comprar <i class="fas fa-cart-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="products.js"></script>
+    <script src="productsControl.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

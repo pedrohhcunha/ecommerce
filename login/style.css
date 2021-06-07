@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --primaryColor: #f7dbff;
+    --secondColor: #3e0044;
+    --thirdColor: #ddd;
+}
+body{
+    background-color: var(--secondColor);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background-color: var(--primaryColor);
+    border-radius: 2px;
+    position: relative;
+    padding: 30px;
+    color: var(--secondColor);
+    width: 25vw;
+    min-width: 350px;
+}
+form h1{
+    font-size: 20px;
+}
+form .area-input{
+    margin-top: 10px;
+}
+form .area-input h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+form .area-input input{
+    width: 100%;
+    height: 40px;
+    background-color: #3e004452;
+    border-radius: 2px;
+    border: none;
+    margin-top: 3px;
+    outline: none;
+    padding-left: 10px;
+    color: var(--secondColor);
+}
+form .area-plus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+}
+form .area-plus a{
+    text-decoration: none;
+    color: var(--secondColor);
+}
+form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    color: var(--primaryColor);
+    background-color: var(--secondColor);
+    margin-top: 10px;
+}
+@media (max-width: 375px){
+    form{
+        width: 100%;
+        height: 100%;
+        padding-top: 10vh;
+    }
+}

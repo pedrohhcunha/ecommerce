@@ -177,7 +177,7 @@ header .area-busca i{
     color: var(--secondColor);
     text-align: center;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .area-produtos h1::after{
     content: '';
@@ -190,43 +190,47 @@ header .area-busca i{
     left: 50%;
     transform: translateX(-50%);
 }
-.area-produtos .opt-produtos{
+.area-produtos .flex-space{
+    display: flex;
+    padding: 0 5%;
+}
+.area-produtos .flex-space .area-filtros{
+    width: 20%;
+    height: 80vh;
+    background-color: #3e0044;
+    padding: 10px;
+}
+.area-produtos .flex-space .area-filtros h2{
+    color: var(--primaryColor);
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.area-produtos .flex-space .area-filtros .area-radio{
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.area-produtos .opt-produtos .area-select{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    color: var(--secondColor);
-    margin-right: 20px;
-}
-.area-produtos .opt-produtos .area-select select{
-    margin-left: 10px;
-    width: 130px;
-    height: 40px;
-    border: none;
+    justify-content: left;
+    margin-bottom: 10px;
     color: var(--primaryColor);
-    background-color: var(--secondColor);
-    outline: none;
-    padding: 5px;
-    transition: .3s;
-    cursor: pointer;
 }
-.area-produtos .opt-produtos .area-select select:hover{
-    filter: brightness(.8);
+.area-produtos .flex-space .area-filtros .area-radio .radio{
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    border: 2px solid var(--primaryColor);
+    margin-right: 10px;
 }
 .area-produtos .produtos{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 10%;
     justify-content: center;
+    width: 80%;
 }
 .area-produtos .produtos .produto{
     width: 20%;
     height: 250px;
     margin: 10px 10px;
+    margin-top: 0;
     background: var(--secondColor);
     overflow: hidden;
     position: relative;
